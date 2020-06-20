@@ -9,11 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 import static com.ignite.utilities.BrowserUtils.selectFromDropdown;
 
 public class Parent_Pg {
+    Parent parent=new Parent();
 
     public Parent_Pg() { PageFactory.initElements(Driver.getDriver(), this); }
 
 
-    @FindBy(name = "pfirstname")
+    @FindBy(id = "pfirstname")
     public WebElement parentFirstName;
 
     @FindBy(id = "pmiddlename")
@@ -57,6 +58,14 @@ public class Parent_Pg {
 
     @FindBy(linkText = "Previous")
     public WebElement previous_Btn;
+    @FindBy(xpath = "//select[@id='pStudentNumber']")
+    public WebElement howManyStudents;
+
+    @FindBy(xpath = "(//span[@data-langkey='parent'])[1]")
+    public WebElement parentPageTitle;
+
+    public String Pemail=parent.email;
+    public String phoneHomeNumber=parent.homeNumber;
 
 
     public void fillParentForm(Parent parent) {

@@ -12,6 +12,7 @@ public class Parent {
     public int zipCode = 75044;
     public String email;
     public String homeNumber;
+    public int howManyStnds;
 
     public Parent() {
         Faker faker = new Faker();

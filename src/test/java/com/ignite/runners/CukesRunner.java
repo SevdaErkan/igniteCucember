@@ -15,9 +15,10 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/ignite/step_defs",
-        tags = "@eif",
+        tags = "@StudentApplications",
 
         dryRun = false
+
 )
 
 

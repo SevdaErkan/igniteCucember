@@ -43,6 +43,9 @@ public class Schools_Pg {
     @FindBy(linkText = "Previous")
     public WebElement previous_Btn;
 
+    @FindBy(xpath = "(//span[@data-langkey='sschool'])[1]")
+    public WebElement schoolsPageTitle;
+
 
     public WebElement selectSchool(int nth){
         return Driver.getDriver().findElement(By.id("school_1_"+(nth+1)));

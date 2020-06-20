@@ -5,6 +5,7 @@ import com.ignite.eif_pages.*;
 import com.ignite.pojos.Parent;
 import com.ignite.pojos.Student;
 import com.ignite.utilities.ConfigReader;
+import com.ignite.utilities.DBconnection;
 import com.ignite.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
@@ -34,6 +35,12 @@ public class EIF_steps {
         fpObj.finish_Btn.click();
         waitFor(2);
 
+
         Assert.assertTrue(cpObj.confirmation_no.isDisplayed());
     }
+
+
+
+
+
 }

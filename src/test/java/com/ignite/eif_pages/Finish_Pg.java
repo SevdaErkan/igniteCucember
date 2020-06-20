@@ -30,4 +30,15 @@ public class Finish_Pg {
     @FindBy(linkText = "Finish")
     public WebElement finish_Btn;
 
+    @FindBy(xpath = "(//span[@data-langkey='ffinish'])[1]")
+    public WebElement finishPageTitle;
+
+    @FindBy(xpath = "//*[@id=\"reviewApplication\"]/section[1]/div[4]/span")
+    public WebElement PEmail;
+
+    @FindBy(xpath = "//*[@id=\"reviewApplication\"]/section[1]/div[5]/div[1]/span")
+    public WebElement Parentphone;
+
+
+
 }

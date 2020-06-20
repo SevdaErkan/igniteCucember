@@ -15,7 +15,7 @@ import static com.ignite.utilities.BrowserUtils.waitFor;
 
 public class Student_Pg {
 
-    @FindBy(id = "parentRelation_1")
+    @FindBy(id="parentRelation_1")
     public WebElement parentRelation;
 
     @FindBy(id = "firstname_1")
@@ -24,13 +24,19 @@ public class Student_Pg {
     @FindBy(id = "lastname_1")
     public WebElement lastName;
 
-    @FindBy(id = "dateofbirth_1")
-    public WebElement dateOfBirth;
+    @FindBy(xpath = "//select[@id='year_1']")
+    public WebElement dateOfBirthYear;
+
+    @FindBy(xpath = "//select[@id='month_1']")
+    public WebElement dateOfBirthMonth;
+
+    @FindBy(xpath = "//select[@id='day_1']")
+    public WebElement dateOfBirthDay;
 
     @FindBy(id = "gender_1")
     public WebElement genderSelect;
 
-    @FindBy(id = "lbl_acadYear_1_1")
+    @FindBy(id = "acadYear_1_1")
     public WebElement currentAcademicYear;
 
     @FindBy(id = "lbl_acadYear_1_2")
@@ -45,6 +51,8 @@ public class Student_Pg {
 
     @FindBy(linkText = "Previous")
     public WebElement previous_Btn;
+    @FindBy(xpath = "(//span[@data-langkey='sstudent'])[1]")
+    public WebElement studentPageTitle;
 
     public Student_Pg() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -60,7 +68,7 @@ public class Student_Pg {
 
         firstName.sendKeys(myStudent.firstName);
         lastName.sendKeys(myStudent.lastName);
-        dateOfBirth.sendKeys(myStudent.dateOfBird);
+//        dateOfBirth.sendKeys(myStudent.dateOfBird);
         lastName.click();
         selectFromDropdown(genderSelect, myStudent.gender);
 
